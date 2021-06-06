@@ -42,9 +42,12 @@
 
 ## Regex Components
 
-email regex: ([\w\.\-_]+)?\w+@[\w-_]+(\.\w+){1,}
+## email regex:
 
-anchors:
+([\w\.\-_]+)?\w+@[\w-_]+(\.\w+){1,}
+
+## anchors:
+
 this dosenot content any anchos Anchors belong to the family of regex tokens that don't match any characters,
 but that assert something about the string or the matching process. Anchors assert that the engine's current position in the string
 matches a well-determined location: for instance, the beginning of the string, or the end of a line.
@@ -52,7 +55,8 @@ The ^ and $ in the regex are Anchors, as seen in the beginning and end of the ex
 the beginning ^ and ending $ anchors indicate that the search must match characters defined by the piece of the expression located between the anchors: ([a-z0-9_.-]+)@([\da-z.-]+).
 ([a-z.]{2,6}) We will explain each of these components in their respective sections below.
 
-quantifier:
+## quantifier:
+
 Quantifiers are used to quantify how many times a part of your regular expression should be repeated.
 If users want to repeat a part in a regular expression such as an individual character, a character class or a sub-expression,
 they can write a quantifier after it to specify how many times it should be repeated. For example, the regular expression /\d{4}/ matches a four-digit number.
@@ -82,20 +86,23 @@ It is the same as /\d\d\d\d/. The following list shows some examples of the most
   the ability to 'backtrack' and re-attempt the rest of the match with one less repetition. For this use case of possessive quantifiers,
   we're only concerned with speeding up failing matches rather than matching something different.
 
-OR Operator:
+## OR Operator:
+
 The Alternation Operator ( | or | )
 Alternatives match one of a choice of regular expressions: if you put the character(s) representing the alternation operator
 between any two regular expressions a and b , the result matches the union of the strings that a and b match.
 Character Classes: this contain Character Classes .the squer brackets alow the pattern to inclode what is in betwen them
 
-Flags:
+## Flags:
+
 Flags are the forward slashes // that begin and end the regex:
 /^([a-z0-9_.-]+)@([\da-z.-]+).([a-z.]{2,6})$/
 Regular expressions, including our regex above, are generally contained within slashes // that simply delimit the search pattern.
 Some expressions have specific flags that modify the search parameters, such as making the seach case-insensitive,
 but our regex just includes standard flags.
 
-Grouping and Capturing:
+## Grouping and Capturing:
+
 Parentheses () are used in regular expressions to group together pieces of the search.
 In our regex, our expression is grouped into 3 sections:
 /^([a-z0-9_.-]+)@([\da-z.-]+).([a-z.]{2,6})$/
@@ -112,12 +119,14 @@ In our regex above, the characters directly before the @ sign [a-z0-9_.-] and di
 are both followed by a +. In the context of this regex, it means there is not a limit to how many characters may exist before and after
 the @ sign.
 
-Boundaries:
+## Boundaries:
+
 Boundaries work by matching strings and their positioning within words and phrases.
 For instance, "\b" matches a word boundary between a word character and a non-word character or position,
 and "\B" matches any position that is not a word boundary.
 
-Back-references:
+## Back-references:
+
 Back-references allow the user to repeat a capturing group. It's used inside a regex by inlining its group number preceded
 by a single backslash.
 
@@ -126,7 +135,8 @@ Look-ahead and look-behind matches fall under the "look-around" patterns.
 Look-around lets you match a group before (look-behind) or after (look-ahead) your main pattern without including it in the result.
 Negative look-arounds specify a group that can NOT match before or after the pattern
 
-Author:
+## Author:
+
 This tutorial was made by Mina Mahmood a current student at the Berkely's coding bootcamp.
 My work can be found here: https://github.com/Minamahmood/bug-free-goggles Thank you for taking the time to read this tutorial.
 I hope it was helpful.
