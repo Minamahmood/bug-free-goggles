@@ -1,5 +1,13 @@
 # Regex Tutorial Starter Code
 
+## Summary
+
+This is a tutorial breakdown on how Regex is used to match a Hex Value in a body of text. /^#?([a-f0-9]{6}|[a-f0-9]{3})$/ is the syntax that I will be using.
+
+Hex Code is a way to identify color. It is always in a 6-digit alphanumeric sequence.
+
+The regex string I am using will return a # Number sign character followed by either a 6 or 3 character length code with only lowercase letters a,b,c,d,e,or f or numbers 0,1,2,3,4,5,6,7,8, or 9.
+
 ## TABLE OF CONTENTS:
 
 ## Regex Components
